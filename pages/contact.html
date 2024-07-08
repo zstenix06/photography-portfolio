@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/contact.css">
+    <script src="https://kit.fontawesome.com/5f2909c32a.js" crossorigin="anonymous"></script>
+    <script src="/loading.js" defer></script>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="contact-container">
+        <div class="header">
+            <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="9be74654-9abc-4273-90b5-d7cb66698666">
+            <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="/assets/arrow_icon.png"></button>
+        </form>
+        <div class="contact-right">
+        <img src="/images/grid-images/folsom/cover-image-4.JPG">
+    </div>
+    </div>
+    
+</body>
+</html>

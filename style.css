@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Signika, sans-serif;
+}
+/*Creates background image*/
+body {
+    min-height: 100vh;
+    background-color: #3a3a3a;
+    background-size:cover;
+    background-position: center;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: wheat;
+    z-index: 100;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    border-top-color: #e0e0e0;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{ transform: rotate(0turn);}
+    to{ transform: rotate(1turn);}
+}
+
+.logo{
+    font-family: monalisa;
+    font-weight: 500;
+    text-align: center;
+    color: #e5cfb0;
+    font-size: 60px;
+}
+
+.logo2{
+    font-weight: 200;
+    text-align: center;
+    color: #e5cfb0;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    z-index: 99;
+}
+
+
+
+.right{
+    display: flex;
+}
+
+.photo-grid {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .photo-grid{
+        flex-direction: column;
+    }
+}
+
+
+.photo:hover {
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px black;
+}
+
+#button{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #e5cfb0;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.nav-items {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #e5cfb0;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-align: center;
+}
+
+#myDIV {
+    display: none;
+}
+
+#myDIV a {
+    text-decoration: none;
+    color: #fdf9f3;
+}
+
+#myDIV li{
+    padding: 10px;
+}
+
+.nav-items a {
+    padding: 10px;
+    color: #e5cfb0;
+    text-decoration: none;
+}
+
+.nav-items a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.social-menu{
+    display: flex;
+    justify-content: center;
+    bottom: 10%;
+}
+.social-menu ul {
+    justify-content: center;
+    padding: 0;
+    margin: 30px;
+    display: flex;
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.social-menu ul li .fa {
+    color: #e5cfb0;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(59, 59, 59);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #F56040;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #049bec;
+}
+
+.nav-items li {
+    list-style: none;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 633px) {
+    .row{
+        flex-direction: column;
+    }
+    .left{
+        align-items: center;
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}
