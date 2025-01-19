@@ -4,4 +4,8 @@ I originally made a photography portfolio 2 years ago from now (2025) and I was 
 
 So this is the final product. I hope you all enjoy, as this is one of the works I am very proud of currently and it helps me constantly to showcase my photography to people.
 
+***----------- IMPORTANT INFO -----------***
+
+**This project utilizes a Lightbox jquery script created by Lokesh Dhakar for the image grid and functionality.** All other JS functionality (page loading screen, dropdown menu) was created by me.
+
 Thank you for reading, Zayden.
